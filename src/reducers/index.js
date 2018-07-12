@@ -1,11 +1,11 @@
 //this file will be the root of reducers for our app
-import characters_json from '../data/characters.json';
+export const ADD_CHARACTER = 'ADD_CHARACTER';
 
-function characters(state= characters_json, action){
-    switch(action.type){
-        default:    
-            return state;
+export default function addCharacterById(id) {
+    const action = {
+      type: ADD_CHARACTER,
+      id
     }
-}
+    return action;
+  }
 
-export default characters;  
